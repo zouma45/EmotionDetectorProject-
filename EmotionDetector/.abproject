@@ -1,0 +1,45 @@
+{
+  "ProjectName": "EmotionDetector",
+  "ProjectGuid": "6ac2f22f-3416-426c-9ab9-d4982c3f6118",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.EmotionDetector",
+  "DisplayName": "EmotionDetector",
+  "Author": "",
+  "Description": "EmotionDetector",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "4.0.0",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "true",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [
+    "ID_CAP_NETWORKING",
+    "ID_CAP_WEBBROWSERCOMPONENT"
+  ],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{c274a99d-d392-4c61-b535-0c9f2cf523c3}",
+  "WP8ProductID": "{c6cf361c-434f-4984-ae25-1bccc66cd653}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.EmotionDetector",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ]
+}
