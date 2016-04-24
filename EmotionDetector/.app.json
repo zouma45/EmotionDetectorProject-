@@ -5,7 +5,7 @@
       "type": "kendo-ui-mobile:view",
       "name": "home",
       "components": [],
-      "title": "Home View",
+      "title": "Home",
       "addToNavigation": true,
       "icon": "home"
     }
@@ -16,8 +16,8 @@
   "view": "home",
   "transition": "slide",
   "showMoreTab": false,
-  "skin": "nova",
-  "skinMainColor": "#32364c",
+  "skin": "flat",
+  "skinMainColor": "#1a1a1a",
   "skinTextColor": "#ffffff",
-  "skinAccentColor": "#ff4350"
+  "skinAccentColor": "#10c4b2"
 }
