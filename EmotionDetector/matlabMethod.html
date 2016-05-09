@@ -1,0 +1,159 @@
+
+
+
+<!DOCTYPE html>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet">
+
+    <link href="styles/overrides.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+
+
+
+
+    <script src="cordova.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="kendo/js/jquery.min.js"></script>
+    <script src="kendo/js/kendo.mobile.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.0.0/Chart.js"></script>
+    <script src="app.js"></script>
+
+
+
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://kendo.cdn.telerik.com/2016.1.412/js/kendo.all.min.js"></script>
+
+</head>
+<script type="text/javascript" charset="utf-8">
+    
+    
+
+        // Wait for device API libraries to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        // device APIs are available
+        //
+        function onDeviceReady() {
+               
+            
+            document.addEventListener("deviceready", uploadPhoto, false);
+
+        }
+        function uploadPhoto(imageURI) {
+           
+            
+      
+                  
+            var options = new FileUploadOptions();
+            options.fileKey="file";
+            options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
+            options.mimeType="image/jpeg";
+
+            var params = {};
+            params.value1 = "test";
+            params.value2 = "param";
+
+            options.params = params;
+
+            var ft = new FileTransfer();
+           // document.getElementById('hi').src=imageURI;
+            document.getElementById("hi").src=document.getElementsByName("uploadedfile").valueOf();
+
+            alert(imageURI);
+            ft.upload(imageURI, encodeURI("http://192.168.8.100:8080/PFA/upload.php"), win, fail, options);
+
+            }
+        }
+
+
+        function win(r) {alert("d5alt mrigél");
+            /*alert("Code = " + r.responseCode);
+            alert("Response = " + r.response);
+            alert("Sent = " + r.bytesSent);*/
+            //document.location.href="http://192.168.8.100:8080/PFA/053.png";
+                         
+                        // 	app.mobileApp.pane.loader.hide(); //hide loading animation
+        
+
+        function fail(error) {
+            alert("An error has occurred: Code = " + error.code);
+            console.log("upload error source " + error.source);
+            console.log("upload error target " + error.target);
+        }
+                         
+                         
+                         
+                         
+                         
+                         
+
+    </script>
+
+
+
+
+<body id="kendoUiMobileApp">
+<script src="components/home/index.js"></script>
+<div data-role="layout" data-id="main">
+    <header data-role="header">
+        <div data-role="navbar">
+            <span data-role="view-title"></span>
+        </div>
+        <div>
+        </div>
+        <img style="display:none;width:inherit;height:inherit; " id="smallImage" src="" />
+       
+			<img id="hi" name="" src="" >
+
+			<form enctype="multipart/form-data" action="http://192.168.8.100:8080/PFA/upload.php" method="POST">
+    			<input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
+    			<input name="uploadedfile" id="blabla" type="file" class="btn btn-default btn-lg btn-block" style="visibility: hidden;" /><br />
+    			<input type="submit" value="Reconnaitre" class="btn btn-default btn-lg btn-block" />
+			</form>
+        
+        
+        
+        <center>  <a href="index.html"  class="btn btn-default btn-lg btn-block" data-icon="action"  >back to Main Menu</a></center>
+       
+    </header>
+    <footer data-role="footer">
+        <div data-role="tabstrip" id="navigation-container">
+          
+            <a id="addfrom" data-icon="add">From Library</a>
+        </div>
+    </footer>
+    
+    
+    <script language="javascript">
+    
+
+    $('#addfrom').click(function() {
+         $('#blabla').click();
+});
+    </script>
+    
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

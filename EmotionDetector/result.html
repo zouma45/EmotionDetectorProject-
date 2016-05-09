@@ -2,25 +2,26 @@
 
 <html>
     <head>
-        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/[version]/jquery.mobile-[version].min.css">
+    <script src="https://code.jquery.com/jquery-[version].min.js"></script>
+    <script src="https://code.jquery.com/mobile/[version]/jquery.mobile-[version].min.js"></script>
     </head>
     <body>
         <center> <h2>
             THE RESULTS
             </h2></center>
-
-            
        
    <center>   <canvas id="c" width="400" height="500"></canvas></center>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
   <script>
-  var anger = localStorage.getItem('angry');
+       var anger = localStorage.getItem('angry');
        var neutral = localStorage.getItem('neutral');
        var sad = localStorage.getItem('sad');
        var happy = localStorage.getItem('happy');
-        var surprise = localStorage.getItem('surprise');
-      var fear = localStorage.getItem('fear');
-      var dd= [parseFloat(anger)*100,parseFloat(sad)*100,parseFloat(neutral)*100,parseFloat(happy)*100,parseFloat(surprise)*100,parseFloat(fear)*100]
+       var surprise = localStorage.getItem('surprise');
+       var fear = localStorage.getItem('fear');
+       var dd= [parseFloat(anger)*100,parseFloat(sad)*100,parseFloat(neutral)*100,parseFloat(happy)*100,parseFloat(surprise)*100,parseFloat(fear)*100]
       ;
       
       
@@ -37,7 +38,7 @@
             ;
 
 
-    }
+    };
 
       
 
@@ -120,5 +121,6 @@
   </script>
     
         <center> <input type="button"  value="Again" name="Again" onclick="again();"></center>
+
     </body>
 </html>
